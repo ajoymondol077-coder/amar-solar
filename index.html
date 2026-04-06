@@ -47,7 +47,28 @@
             gap: 16px;
         }
 
-        .logo-area h1 {
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .logo-icon {
+            background: linear-gradient(145deg, #f5a623, #e67e22);
+            width: 48px;
+            height: 48px;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 14px rgba(230,126,34,0.2);
+        }
+        .logo-icon i {
+            font-size: 28px;
+            color: white;
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+        }
+        .logo-text h1 {
             font-size: 1.9rem;
             font-weight: 800;
             letter-spacing: -0.5px;
@@ -55,10 +76,10 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
+            line-height: 1.2;
         }
-
-        .logo-area p {
-            font-size: 0.85rem;
+        .logo-text p {
+            font-size: 0.75rem;
             font-weight: 500;
             color: #2c7a47;
             letter-spacing: 0.3px;
@@ -160,13 +181,13 @@
         }
 
         .updated-tagline {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: #2c7a47;
             margin: 20px 0 20px;
             background: #fef2e0;
             display: inline-block;
-            padding: 8px 24px;
+            padding: 8px 28px;
             border-radius: 60px;
             letter-spacing: -0.2px;
         }
@@ -372,6 +393,9 @@
                 flex-direction: column;
                 text-align: center;
             }
+            .logo-area {
+                justify-content: center;
+            }
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
@@ -395,14 +419,6 @@
                 flex-direction: column;
             }
         }
-
-        /* utility */
-        .text-center {
-            text-align: center;
-        }
-        .mt-4 {
-            margin-top: 24px;
-        }
     </style>
 </head>
 <body>
@@ -411,37 +427,41 @@
     <div class="container">
         <div class="navbar">
             <div class="logo-area">
-                <h1>Amar Solar</h1>
-                <p>⭐ নতুন ট্যাগলাইন: "ঘরে ঘরে সূর্যের আলো, অমর শক্তির ঠিকানা"</p>
+                <div class="logo-icon">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Amar Solar</h1>
+                    <p>Powering Bangladesh with Clean Energy</p>
+                </div>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="active">হোম</a></li>
-                <li><a href="#services">সেবা</a></li>
-                <li><a href="#why">কেন আমরা</a></li>
-                <li><a href="#contact">যোগাযোগ</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="btn-outline" id="quoteBtn">ফ্রি কোট পান</button>
+            <button class="btn-outline" id="quoteBtn">Get Free Quote</button>
         </div>
     </div>
 </header>
 
 <main>
-    <!-- Hero section with updated tagline (both Bengali & English modern twist) -->
+    <!-- Hero section with refreshed tagline (English) -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="hero-badge"><i class="fas fa-solar-panel"></i> বাংলাদেশের বিশ্বস্ত সোলার ব্র্যান্ড</div>
-                    <h1>আমার সোলার <span class="highlight">– সবার জন্য সৌরশক্তি</span></h1>
-                    <!-- Refreshed Tagline: More impactful, poetic yet business oriented -->
+                    <div class="hero-badge"><i class="fas fa-solar-panel"></i> Bangladesh's Trusted Solar Brand</div>
+                    <h1>Amar Solar <span class="highlight">– Solar Power for Everyone</span></h1>
+                    <!-- New English tagline: energetic, local pride -->
                     <div class="updated-tagline">
-                        ✨ "আমার সূর্য, আমার ঘর – অফ-গ্রিড স্বপ্ন, অন(grid) শক্তি" ✨
+                        ☀️ "My Sun, My Home – Off-Grid Dreams, On-Grid Power" ☀️
                     </div>
                     <p class="hero-desc">
-                        দেশের প্রতিটি ঘরে সাশ্রয়ী, টেকসই সোলার সমাধান। বিদ্যুৎ বিল কমানো থেকে শুরু করে সম্পূর্ণ সোলার সিস্টেম –
-                        আমরা আছি আপনার পাশে। 
+                        Affordable, sustainable solar solutions for every household in Bangladesh. Reduce electricity bills, install complete solar systems — we are by your side.
                     </p>
-                    <button class="btn-primary" id="exploreBtn">আমাদের সেবা দেখুন <i class="fas fa-arrow-right"></i></button>
+                    <button class="btn-primary" id="exploreBtn">Explore Services <i class="fas fa-arrow-right"></i></button>
                 </div>
                 <div class="hero-image">
                     <img src="https://cdn-icons-png.flaticon.com/512/2982/2982659.png" alt="Solar Panel Illustration">
@@ -450,95 +470,95 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section (English) -->
     <section id="services" class="section">
         <div class="container">
-            <h2 class="section-title">আমাদের সোলার সমাধান</h2>
-            <p class="section-sub">আপনার চাহিদা অনুযায়ী ডিজাইন করা সিস্টেম, পেশাদার টিম এবং সর্বোচ্চ গ্যারান্টি</p>
+            <h2 class="section-title">Our Solar Solutions</h2>
+            <p class="section-sub">Customized systems, professional team, and the highest guarantee for your energy independence</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-home"></i></div>
-                    <h3>হোম সোলার সিস্টেম</h3>
-                    <p>ছাদে সোলার প্যানেল বসিয়ে বাড়ির লোড চালান, মাসিক বিল কমিয়ে ফেলুন ৮০% পর্যন্ত।</p>
+                    <h3>Home Solar System</h3>
+                    <p>Install rooftop solar panels, power your home, and reduce monthly bills by up to 80%.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-building"></i></div>
-                    <h3>বাণিজ্যিক সিস্টেম</h3>
-                    <p>শপ, রেস্তোরা, ইন্ডাস্ট্রি - বড় প্রজেক্টের জন্য হাইব্রিড ও অন(grid) সমাধান।</p>
+                    <h3>Commercial Solutions</h3>
+                    <p>Hybrid & on-grid systems for shops, restaurants, industries, and large-scale projects.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-water-pump"></i></div>
-                    <h3>সোলার ইরিগেশন</h3>
-                    <p>কৃষকদের জন্য সোলার পাম্প ও ড্রিপ ইরিগেশন – সাশ্রয়ী ও নির্ভরযোগ্য।</p>
+                    <h3>Solar Irrigation</h3>
+                    <p>Cost-effective solar pumps and drip irrigation for farmers — reliable and eco-friendly.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-charging-station"></i></div>
-                    <h3>সোলার ব্যাটারি ব্যাকআপ</h3>
-                    <p>লিথিয়াম ও জেল ব্যাটারি, ইনভার্টার সহ টোটাল সলিউশন।</p>
+                    <h3>Battery Backup</h3>
+                    <p>Lithium & gel batteries with inverters — complete energy storage solutions.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
+    <!-- Why Choose Us (English) -->
     <section id="why" class="section why-section">
         <div class="container">
-            <h2 class="section-title">কেন অমর সোলার?</h2>
-            <p class="section-sub">গুণগত মান, সাশ্রয়ী মূল্য ও ২৪/৭ সার্ভিস – আমরা সোলার বিপ্লবের পথিকৃৎ</p>
+            <h2 class="section-title">Why Amar Solar?</h2>
+            <p class="section-sub">Quality, affordable pricing, and 24/7 service — we lead the solar revolution</p>
             <div class="features">
-                <div class="feature-item"><i class="fas fa-trophy"></i><h4>১০+ বছর অভিজ্ঞতা</h4><p>বাংলাদেশের সোলার শিল্পে দক্ষতা ও বিশ্বাস</p></div>
-                <div class="feature-item"><i class="fas fa-hand-holding-usd"></i><h4>সাশ্রয়ী মূল্য</h4><p>ইনস্টলমেন্ট সুবিধা ও প্রতিযোগিতামূলক দাম</p></div>
-                <div class="feature-item"><i class="fas fa-headset"></i><h4>লাইফটাইাম সাপোর্ট</h4><p>ইনস্টলেশনের পর টেকনিক্যাল সার্ভিস</p></div>
-                <div class="feature-item"><i class="fas fa-certificate"></i><h4>গ্যারান্টিযুক্ত পণ্য</h4><p>টায়ার-১ সোলার প্যানেল, ২৫ বছর ওয়ারেন্টি</p></div>
+                <div class="feature-item"><i class="fas fa-trophy"></i><h4>10+ Years Experience</h4><p>Expertise and trust in Bangladesh's solar industry</p></div>
+                <div class="feature-item"><i class="fas fa-hand-holding-usd"></i><h4>Affordable Pricing</h4><p>Installment facilities & competitive rates</p></div>
+                <div class="feature-item"><i class="fas fa-headset"></i><h4>Lifetime Support</h4><p>Post-installation technical service</p></div>
+                <div class="feature-item"><i class="fas fa-certificate"></i><h4>Guaranteed Products</h4><p>Tier-1 solar panels, 25-year warranty</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section + Quote Form -->
+    <!-- Contact Section + Quote Form (English) -->
     <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">আমাদের সাথে যোগাযোগ করুন</h2>
-            <p class="section-sub">বিনামূল্যে পরামর্শ ও কোট পেতে ফর্মটি পূরণ করুন বা কল করুন</p>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-sub">Fill out the form for a free consultation and quote, or give us a call</p>
             <div class="contact-flex">
                 <div class="contact-info">
-                    <h3 style="margin-bottom: 20px; color:#e67e22"><i class="fas fa-map-marker-alt"></i> আমাদের ঠিকানা</h3>
+                    <h3 style="margin-bottom: 20px; color:#e67e22"><i class="fas fa-map-marker-alt"></i> Our Office</h3>
                     <div class="contact-details">
-                        <p><i class="fas fa-store"></i> <strong>আমার সোলার হেড অফিস</strong><br> ২৫/এ, গুলশান এভিনিউ, ঢাকা-১২১২, বাংলাদেশ</p>
-                        <p><i class="fas fa-phone-alt"></i> +৮৮০ ১৭১২-৩৪৫৬৭৮</p>
+                        <p><i class="fas fa-store"></i> <strong>Amar Solar Head Office</strong><br> 25/A, Gulshan Avenue, Dhaka-1212, Bangladesh</p>
+                        <p><i class="fas fa-phone-alt"></i> +880 1712-345678</p>
                         <p><i class="fas fa-envelope"></i> info@amarsolar.com.bd</p>
-                        <p><i class="fas fa-clock"></i> শনি - বৃহস্পতি: ৯am - ৮pm, শুক্র: বন্ধ</p>
+                        <p><i class="fas fa-clock"></i> Sat - Thu: 9am - 8pm, Friday: Closed</p>
                         <div style="margin-top: 30px;">
-                            <i class="fab fa-facebook fa-2x" style="margin-right: 18px; color:#e67e22"></i>
-                            <i class="fab fa-whatsapp fa-2x" style="margin-right: 18px; color:#e67e22"></i>
-                            <i class="fab fa-linkedin fa-2x" style="color:#e67e22"></i>
+                            <i class="fab fa-facebook fa-2x" style="margin-right: 18px; color:#e67e22; cursor:pointer;"></i>
+                            <i class="fab fa-whatsapp fa-2x" style="margin-right: 18px; color:#e67e22; cursor:pointer;"></i>
+                            <i class="fab fa-linkedin fa-2x" style="color:#e67e22; cursor:pointer;"></i>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <h3 style="margin-bottom: 20px;">ফ্রি কোট ও সলিউশন চান?</h3>
+                    <h3 style="margin-bottom: 20px;">Request a Free Quote</h3>
                     <form id="leadForm">
                         <div class="form-group">
-                            <input type="text" placeholder="আপনার নাম *" id="fullName" required>
+                            <input type="text" placeholder="Your Full Name *" id="fullName" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="মোবাইল নম্বর *" id="phone" required>
+                            <input type="tel" placeholder="Mobile Number *" id="phone" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="ইমেইল (ঐচ্ছিক)" id="email">
+                            <input type="email" placeholder="Email (Optional)" id="email">
                         </div>
                         <div class="form-group">
                             <select id="serviceType">
-                                <option value="">সেবা নির্বাচন করুন</option>
-                                <option>হোম সোলার সিস্টেম</option>
-                                <option>বাণিজ্যিক সোলার</option>
-                                <option>সোলার ইরিগেশন</option>
-                                <option>ব্যাটারি ব্যাকআপ</option>
+                                <option value="">Select Service</option>
+                                <option>Home Solar System</option>
+                                <option>Commercial Solar</option>
+                                <option>Solar Irrigation</option>
+                                <option>Battery Backup</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea rows="3" placeholder="আপনার মেসেজ / প্রয়োজনীয় লোড সম্পর্কে বিস্তারিত" id="message"></textarea>
+                            <textarea rows="3" placeholder="Your message / load requirements (optional)" id="message"></textarea>
                         </div>
-                        <button type="submit" class="btn-primary" style="width:100%"><i class="fas fa-paper-plane"></i> কোটের অনুরোধ করুন</button>
+                        <button type="submit" class="btn-primary" style="width:100%"><i class="fas fa-paper-plane"></i> Request Quote</button>
                     </form>
                     <div id="formFeedback" style="margin-top: 16px; font-weight: 500; text-align:center;"></div>
                 </div>
@@ -552,25 +572,23 @@
         <div class="footer-grid">
             <div class="footer-logo">
                 <h3>Amar Solar</h3>
-                <p style="margin-top: 8px;">"আমার সূর্য, আমার ঘর – অফ-গ্রিড স্বপ্ন, অন(grid) শক্তি"</p>
-                <p style="font-size:0.85rem; margin-top: 14px;">সোলার এনার্জি পার্টনার অব বাংলাদেশ</p>
+                <p style="margin-top: 8px;">"My Sun, My Home – Off-Grid Dreams, On-Grid Power"</p>
+                <p style="font-size:0.85rem; margin-top: 14px;">Solar Energy Partner of Bangladesh</p>
             </div>
             <div class="footer-links">
-                <div><a href="#home">হোম</a><br><a href="#services">সেবা</a></div>
-                <div><a href="#why">কেন আমরা</a><br><a href="#contact">যোগাযোগ</a></div>
-                <div><a href="#">প্রাইভেসি পলিসি</a><br><a href="#">টার্মস</a></div>
+                <div><a href="#home">Home</a><br><a href="#services">Services</a></div>
+                <div><a href="#why">Why Us</a><br><a href="#contact">Contact</a></div>
+                <div><a href="#">Privacy Policy</a><br><a href="#">Terms</a></div>
             </div>
         </div>
         <div class="copyright">
-            &copy; 2026 Amar Solar - বাংলাদেশের সোলার বিপ্লব। সর্বস্বত্ব সংরক্ষিত।
+            &copy; 2026 Amar Solar - Powering a sustainable Bangladesh. All rights reserved.
         </div>
     </div>
 </footer>
 
-<!-- Sweet & smooth interactions -->
 <script>
-    // updated tagline already shown in HTML: "আমার সূর্য, আমার ঘর – অফ-গ্রিড স্বপ্ন, অন(grid) শক্তি"
-    // additional UI interactions
+    // Enhanced interactions + logo handling (fully english)
     const exploreBtn = document.getElementById('exploreBtn');
     if(exploreBtn) {
         exploreBtn.addEventListener('click', () => {
@@ -584,7 +602,7 @@
         });
     }
 
-    // Form submit handling (demo local storage + alert)
+    // Form submit handler (demo / lead simulation)
     const leadForm = document.getElementById('leadForm');
     const feedbackDiv = document.getElementById('formFeedback');
     leadForm.addEventListener('submit', (e) => {
@@ -592,23 +610,23 @@
         const name = document.getElementById('fullName').value.trim();
         const phone = document.getElementById('phone').value.trim();
         if (!name || !phone) {
-            feedbackDiv.innerHTML = '<span style="color:#d9534f;">দয়া করে নাম এবং মোবাইল নম্বর দিন!</span>';
+            feedbackDiv.innerHTML = '<span style="color:#d9534f;">Please provide your name and mobile number!</span>';
             return;
         }
         const email = document.getElementById('email').value;
         const service = document.getElementById('serviceType').value;
         const msg = document.getElementById('message').value;
 
-        // Simulate sending data (for demonstration)
-        console.log('Lead Data:', { name, phone, email, service, msg });
-        feedbackDiv.innerHTML = '<span style="color:#2c7a47;"><i class="fas fa-check-circle"></i> ধন্যবাদ! আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।</span>';
+        // Simulate sending data (console log for demo)
+        console.log('Lead from Amar Solar:', { name, phone, email, service, msg });
+        feedbackDiv.innerHTML = '<span style="color:#2c7a47;"><i class="fas fa-check-circle"></i> Thank you! Our team will contact you within 24 hours.</span>';
         leadForm.reset();
         setTimeout(() => {
             feedbackDiv.innerHTML = '';
         }, 5000);
     });
 
-    // Smooth scroll for nav links
+    // Smooth scroll for nav links (single page)
     document.querySelectorAll('.nav-links a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -617,19 +635,12 @@
             if(targetElem) {
                 targetElem.scrollIntoView({ behavior: 'smooth' });
             }
-            // update active class
             document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
             this.classList.add('active');
         });
     });
 
-    // optional: interactive background / dynamic year
-    const yearSpan = document.querySelector('.copyright');
-    if(yearSpan) {
-        // just keeping dynamic or none, but fine.
-    }
-
-    // On load active highlight based on scroll (simple)
+    // Scroll spy for active nav highlight
     const sections = document.querySelectorAll('section');
     const navItems = document.querySelectorAll('.nav-links a');
     window.addEventListener('scroll', () => {
@@ -651,6 +662,5 @@
         });
     });
 </script>
-
 </body>
 </html>
